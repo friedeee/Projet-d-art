@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-onyx: #0B0B0C;
+  --color-panel: #151412;
+  --color-ivoire: #F3EFE6;
+  --color-laiton: #B8934A;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* Conteneur commun à toutes les pages */
+@utility container-page {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+body {
+  background-color: var(--color-onyx);
+  color: var(--color-ivoire);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-laiton);
+  color: var(--color-onyx);
+}
+
+.filet {
+  border-color: rgba(243, 239, 230, 0.12);
+}
+
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-laiton), transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-laiton);
+  outline-offset: 2px;
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-hero-in {
+  animation: hero-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-mask {
+  clip-path: inset(0 0 0 100%);
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+@keyframes reveal {
+  to { clip-path: inset(0 0 0 0%); }
+}
+
+/* Barre de chargement entre deux pages */
+@keyframes route-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(0.85); }
+}
+.animate-route-progress {
+  transform-origin: left;
+  animation: route-progress 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-hero-in, .reveal-mask {
+    animation: none;
+    clip-path: none;
+    opacity: 1;
+    transform: none;
+  }
+}

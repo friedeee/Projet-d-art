@@ -1,0 +1,10 @@
+// Œuvres de démonstration : les images (photo) sont des visuels d’illustration
+// issus de Wikimedia Commons, à remplacer par les photos des vraies œuvres.
+export const ARTWORKS = [
+  { slug: 'masque-gelede-revisite', title: 'Masque Gèlèdé revisité', artist: 'Sessi Dossou', technique: 'Acrylique sur bois', price: 85000, image: '/images/gelede.webp' },
+  { slug: 'lagune-au-crepuscule', title: 'Lagune au crépuscule', artist: 'Ines Adjovi', technique: 'Huile sur toile', price: 120000, image: '/images/galerie/lagune-au-crepuscule.webp', photo: { author: 'Eric Emeraux', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Coucher_de_soleil_sur_le_lac_Nokou%C3%A9_en_direction_de_Ganvi%C3%A9.jpg' } },
+  { slug: 'tenture-recade', title: 'Tenture Récade', artist: 'Kokou Ferdinand', technique: 'Appliqué textile', price: 150000, image: '/images/galerie/tenture-recade.webp', photo: { author: 'Ji-Elle', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Tenture_appliqu%C3%A9e_Sakpata-Mus%C3%A9e_du_Quai_Branly_(cropped).jpg' } },
+  { slug: 'portrait-de-ganvie', title: 'Portrait de Ganvié', artist: 'Marielle Houngbo', technique: 'Photographie, tirage limité', price: 45000, image: '/images/galerie/portrait-de-ganvie.webp', photo: { author: 'Adoscam', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Pirogue_%C3%A0_voile_ou_pirogue_%C3%A0_balancier_de_type_b%C3%A9ninois_sur_le_fleuve_de_Ganvi%C3%A9_05.jpg' } },
+  { slug: 'cauris-et-memoire', title: 'Cauris et mémoire', artist: 'Sessi Dossou', technique: 'Sculpture bronze', price: 210000, image: '/images/galerie/cauris-et-memoire.webp', photo: { author: 'Sailko', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Benin,_fon,_abomey,_altarino_di_metallo,_03.JPG' } },
+  { slug: 'route-de-ouidah', title: 'Route de Ouidah', artist: 'Ines Adjovi', technique: 'Aquarelle', price: 38000, image: '/images/galerie/route-de-ouidah.webp', photo: { author: 'Chiemelacebelae', license: 'CC0', source: 'https://commons.wikimedia.org/wiki/File:Vue_de_nuit_la_porte_du_non_retour_a_Ouidah_01.jpg' } },
+]
